@@ -19,9 +19,9 @@ from django.urls import path, include
 from stepshop.views import index, contact, about
 
 urlpatterns = [
-    path('', index),
+    path('', index, name='index'),
     path('admin/', admin.site.urls),
-    path('about/', about),
-    path('contact/', contact),
-    path('products/', include('mainapp.urls')),
+    path('about/', about, name='about'),
+    path('contact/', contact, name='contacts'),
+    path('products/', include('mainapp.urls', namespace='products')),
 ]

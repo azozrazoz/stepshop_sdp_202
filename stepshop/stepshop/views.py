@@ -2,12 +2,28 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "index.html")
+    page_name = 'главная страница'
+
+    context = {
+        'title': page_name,
+    }
+
+    return render(request, "index.html", context)
 
 
 def about(request):
-    return render(request, "about.html")
+    page_name = 'о нас'
+
+    context = {
+        'title': page_name,
+    }
+    return render(request, "about.html", context)
 
 
 def contact(request):
+    page_name = 'о нас'
+
+    context = {
+        'title': page_name,
+    }
     return render(request, "contact.html")

@@ -2,8 +2,18 @@ from django.shortcuts import render
 
 
 def products(request):
-    return render(request, "products.html")
+    page_name = 'продукты'
+
+    context = {
+        'title': page_name,
+    }
+    return render(request, "products.html", context)
 
 
 def product(request):
-    return render(request, "product.html")
+    page_name = 'продукт'
+
+    context = {
+        'title': page_name,
+    }
+    return render(request, "product.html", context)
