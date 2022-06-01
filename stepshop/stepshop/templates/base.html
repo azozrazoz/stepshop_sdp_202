@@ -14,13 +14,13 @@
     <title>{% block title %}PageName{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'stepshop/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/tooplate-main.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'stepshop/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'stepshop/assets/css/tooplate-main.css' %}">
+    <link rel="stylesheet" href="{% static 'stepshop/assets/css/owl.css' %}">
     {% block css %}{% endblock %}
 <!--
 Tooplate 2114 Pixie
@@ -105,7 +105,7 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="logo">
-              <img src="{% static 'static/stepshop/assets/images/header-logo.png' %}" alt="">
+              <img src="{% static '/stepshop/assets/images/header-logo.png' %}" alt="">
             </div>
           </div>
           <div class="col-md-12">
@@ -151,14 +151,14 @@ https://www.tooplate.com/view/2114-pixie
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'static/stepshop/vendor//static/steshop/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'static/stepshop/vendor//static/steshop/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'stepshop/vendor/static/steshop/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'stepshop/vendor/static/steshop/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="{% static 'static/stepshop/assets/js/custom.js' %}"></script>
-    <script src="{% static 'static/stepshop/assets/js/custom.js' %}"></script>
-    <script src="{% static 'static/stepshop/assets/js/owl.js' %}"></script>
+    <script src="{% static 'stepshop/assets/js/custom.js' %}"></script>
+    <script src="{% static 'stepshop/assets/js/custom.js' %}"></script>
+    <script src="{% static 'stepshop/assets/js/owl.js' %}"></script>
 
 
     <script language = "text/Javascript">
@@ -171,7 +171,7 @@ https://www.tooplate.com/view/2114-pixie
           }
       }
     </script>
-  {% block js %}{% endblock %}
+    {% block js %}{% endblock %}
 
   </body>
 

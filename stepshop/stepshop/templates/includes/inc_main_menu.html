@@ -9,20 +9,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'index' %}">Главная
+            {% for item in links_menu %}
+            <li class="nav-item {% if request.resolver_match.route == item.route%}active{% endif %}">
+              <a class="nav-link" href="{% url item.href %}">{{ item.name|safe }}
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'products:index' %}">Продукты</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">О нас</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
-            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
