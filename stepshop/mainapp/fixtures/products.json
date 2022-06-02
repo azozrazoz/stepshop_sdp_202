@@ -1,0 +1,62 @@
+[
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Джинсы синие",
+      "image": "product_images/product-01.jpg",
+      "short_desc": "Очень хорошие",
+      "description": "",
+      "price": "500.00",
+      "quantity": 5,
+      "crated_at": "2022-06-01T11:40:47.543Z",
+      "update_at": "2022-06-02T10:10:22.189Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Джинсы красные",
+      "image": "product_images/item-05.jpg",
+      "short_desc": "Очень хорошие",
+      "description": "",
+      "price": "800.00",
+      "quantity": 6,
+      "crated_at": "2022-06-01T11:41:44.279Z",
+      "update_at": "2022-06-02T10:10:39.500Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "name": "Бобер клыкастый",
+      "image": "product_images/item-06.jpg",
+      "short_desc": "ыыыыы",
+      "description": "ыыыыыыыыыыыыыыыы",
+      "price": "1500.00",
+      "quantity": 6,
+      "crated_at": "2022-06-02T09:22:17.098Z",
+      "update_at": "2022-06-02T09:22:17.098Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "Правый кед",
+      "image": "product_images/item-03.jpg",
+      "short_desc": "Только правый",
+      "description": "",
+      "price": "600.00",
+      "quantity": 3,
+      "crated_at": "2022-06-02T09:48:01.304Z",
+      "update_at": "2022-06-02T10:15:41.450Z"
+    }
+  }
+]
