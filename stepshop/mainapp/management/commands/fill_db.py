@@ -35,7 +35,6 @@ class Command(BaseCommand):
             category_id = _product.get('category')
 
             _product['category'] = ProductCategory.objects.get(pk=category_id)
-
             new_product = Product(**_product)
             new_product.save()
 
