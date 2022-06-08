@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{% static 'stepshop/assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'stepshop/assets/css/tooplate-main.css' %}">
     <link rel="stylesheet" href="{% static 'stepshop/assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'stepshop/assets/css/style.css' %}">
     {% endblock %}
 <!--
 Tooplate 2114 Pixie
@@ -37,15 +38,10 @@ https://www.tooplate.com/view/2114-pixie
             <span>
               {% if user.is_authenticated %}
                 {{ user.username }}
+                <a href="/auth/logout/">Выйти</a>
               {% else %}
-                <a href="/admin/login/">Войти</a>
+                <a href="/auth/login/">Войти</a>
               {% endif %}
-
-
-              {% for item in object %}
-                {{ item }}
-              {% endfor %}
-
             </span>
           </div>
         </div>

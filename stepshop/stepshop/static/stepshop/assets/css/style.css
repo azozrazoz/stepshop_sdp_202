@@ -1,0 +1,10 @@
+#pre-header a {
+    color: white;
+    border: 2px solid rgb(61, 75, 120);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#pre-header a:hover {
+    opacity: 0.8;
+}

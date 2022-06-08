@@ -13,10 +13,14 @@
             <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
                 {% csrf_token %}
                 {{ login_form.as_p }}
-                <button type="submit" class="btn-primary">Войти</button>
+                <button type="submit" class="btn btn-round btn-primary">Войти</button>
             </form>
+            <button class="btn btn-round btn-primary">
+                <a href="{% url 'auth:register' %}" class="text-light">Регистрация</a>
+            </button>
         </div>
     </div>
 </div>
+
 
 {% endblock %}
