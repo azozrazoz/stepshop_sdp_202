@@ -13,9 +13,8 @@
             <form class="form-horizontal" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <p>
-                    <label>Логин:
+                    <label for="login">Логин:</label>
                         {{ register_form.username }}
-                    </label>
                 </p>
                 <p>
                     <label>Имя:

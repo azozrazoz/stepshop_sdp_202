@@ -17,6 +17,17 @@ class ShopUserLoginForm(AuthenticationForm):
 
 
 class ShopUserRegisterForm(UserCreationForm):
+    username = forms.CharField(
+        max_length=128,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Логин',
+                'id': 'login',
+            }
+        )
+    )
+
     class Meta:
         model = ShopUser
         fields = {'username', 'first_name', 'password1', 'password2', 'email', 'age', 'avatar'}
