@@ -10,7 +10,7 @@
 
     <div class="row">
         <div class="mx-auto col-3">
-            <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{% url 'index' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <p>
                     <label for="login">Логин:</label>
@@ -36,6 +36,7 @@
                 <p>
                     <label for="email">Почта:</label>
                         {{ register_form.email }}
+                    {{ register_form.errors.email }}
                 </p>
                 <p>
                     <label for="age">Возраст:</label>
@@ -48,7 +49,7 @@
                         {{ register_form.avatar }}
 
                 </p>
-                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-primary mt-3">Зарегистрироваться</button>
             </form>
         </div>
     </div>
