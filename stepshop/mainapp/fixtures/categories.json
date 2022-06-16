@@ -1,0 +1,26 @@
+[
+  {
+    "model": "mainapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Джинсы",
+      "description": "Ваще это самые крутые джинсы на всем свете"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Кеды",
+      "description": "Нашу кеды никогда не пахнут"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Бобры",
+      "description": "они не продаются"
+    }
+  }
+]
