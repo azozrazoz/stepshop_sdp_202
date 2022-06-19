@@ -48,6 +48,7 @@ def register(request):
 
     return render(request, 'authapp/register.html', context)
 
+
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))

@@ -45,4 +45,3 @@ class ShopUserRegisterForm(UserCreationForm):
             raise forms.ValidationError('Вы слишком молоды')
 
         return data
-
