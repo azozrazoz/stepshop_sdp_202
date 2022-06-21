@@ -6,49 +6,41 @@
 {% block content %}
 
 <div class="container">
-    <h1>{{ title|capfirst }}</h1>
+    <h1 style="text-align: center; font-family: Geneva, Arial, Helvetica, sans-serif;">{{ title|capfirst }}</h1>
 
     <div class="row">
         <div class="mx-auto col-3">
-            <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+            <form style="align-items: center; text-align: center;" class="form-horizontal" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <p>
-                    <label for="login">Логин:</label>
+                <p style="text-align: left;">
+                    <label for="username">Логин:</label>
                         {{ register_form.username }}
                 </p>
-                <p>
+                <p style="text-align: left;">
                     <label for="first_name">Имя:</label>
                         {{ register_form.first_name }}
-
                 </p>
-                <p>
+                <p style="text-align: left;">
                     <label for="password1">Пароль:</label>
                         {{ register_form.password1 }}
-                        {{ register_form.errors.password1 }}
-
                 </p>
-                <p>
+                <p style="text-align: left;">
                     <label for="password2">Подтверждение пароля:</label>
                         {{ register_form.password2 }}
-                        {{ register_form.errors.password2 }}
-
                 </p>
-                <p>
+                <p style="text-align: left;">
                     <label for="email">Почта:</label>
                         {{ register_form.email }}
                 </p>
-                <p>
+                <p style="text-align: left;">
                     <label for="age">Возраст:</label>
                         {{ register_form.age }}
-                        {{ register_form.errors.age }}
-
                 </p>
-                <p>
-                    <label>Аватар:</label>
+                <p style="text-align: left;">
+                    <label for="avatar">Аватар:</label>
                         {{ register_form.avatar }}
-
                 </p>
-                <button type="submit" class="btn-primary">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-primary mt-3 mb-5">Зарегистрироваться</button>
             </form>
         </div>
     </div>
