@@ -46,7 +46,7 @@ def register(request):
             register_form.save()
             return HttpResponseRedirect(reverse('auth:login'))
     else:
-        register_form = ShopUserRegisterForm()
+        register_form = ShopUserRegisterForm(request.FILES)
 
     context = {
         'title': page_name,
