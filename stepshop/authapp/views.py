@@ -6,6 +6,14 @@ from django.urls import reverse
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
 
 
+links_menu = [
+    {'href': 'index', 'name': 'Домой', 'route': ''},
+    {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
+    {'href': 'about', 'name': 'О&nbsp;нас', 'route': 'about/'},
+    {'href': 'contacts', 'name': 'Контакты', 'route': 'contact/'},
+]
+
+
 def login(request):
     page_name = 'вход'
 
@@ -31,6 +39,7 @@ def login(request):
         'title': page_name,
         'login_form': login_form,
         'next': _next,
+        'links_menu': links_menu,
     }
 
     return render(request, 'authapp/login.html', context)
@@ -51,6 +60,7 @@ def register(request):
     context = {
         'title': page_name,
         'register_form': register_form,
+        'links_menu': links_menu,
     }
 
     return render(request, 'authapp/register.html', context)
@@ -71,6 +81,7 @@ def edit(request):
     context = {
         'title': page_name,
         'edit_form': edit_form,
+        'links_menu': links_menu,
     }
     return render(request, 'authapp/edit.html', context)
 

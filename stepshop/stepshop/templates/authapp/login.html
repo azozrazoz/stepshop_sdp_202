@@ -6,21 +6,25 @@
 {% block content %}
 
 <div class="container">
-    <h1>{{ title|capfirst }}</h1>
+    <h1 style="text-align:left; font-family: Geneva, Arial, Helvetica, sans-serif;">{{ title|capfirst }}</h1>
 
     <div class="row">
-        <div class="mx-auto col-3">
+        <div class="mx-auto col-3" style="text-align: center;">
             <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
                 {% csrf_token %}
-
-                {% if next %}
-                    <input type="hidden" name="next" value="{{ next }}">
-                {% endif %}
-
-                {{ login_form.as_p }}
+                <p style="text-align: left;">
+                    <label>Логин:</label>
+                    {{ login_form.username }}
+                    {{ login_form.errors.username }}
+                </p>
+                <p style="text-align: left;">
+                    <label>Пароль:</label>
+                    {{ login_form.password }}
+                    {{ login_form.errors.password }}
+                </p>
                 <button type="submit" class="btn btn-round btn-primary mt-3">Войти</button>
             </form>
-            <button class="btn btn-round btn-primary mt-3">
+            <button class="btn btn-round btn-primary mt-3 mb-5">
                 <a href="{% url 'auth:register' %}" class="text-light">Регистрация</a>
             </button>
         </div>

@@ -1,0 +1,26 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %} {{ title|capfirst }} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{ title|capfirst }}</h1>
+
+    <div class="row">
+        <div class="mx-auto col-3">
+            <form class="form-horizontal" action="{% url 'auth:login' %}" method="post">
+                {% csrf_token %}
+                {{ login_form.as_p }}
+                <button type="submit" class="btn btn-round btn-primary mt-3">Войти</button>
+            </form>
+            <button class="btn btn-round btn-primary mt-3">
+                <a href="{% url 'auth:register' %}" class="text-light">Регистрация</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
